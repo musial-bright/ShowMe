@@ -18,8 +18,8 @@ void draw() {
   }
   
   for (int i=0; i < lines.size(); i++) {
-    MyLine l = (MyLine)lines.get(i);
-    l.drawLine();
+    Line l = (Line)lines.get(i);
+    l.draw();
     text("line " + l.x + "," + l.y + " -> " + l.xx + "," + l.yy , 0, 10 + (i * 20));
   }
   
@@ -32,7 +32,7 @@ void mousePressed() {
 }
 
 void mouseReleased() {
-  lines.add(new MyLine(startX, startY, mouseX, mouseY));
+  lines.add(new Line(startX, startY, mouseX, mouseY));
   previewLine = false;
 }
 
@@ -46,17 +46,17 @@ void drawButtons() {
   strokeWeight(1);
 }
 
-class MyLine {
+class Line {
   int x, y, xx, yy;
   
-  MyLine(int tempX, int tempY, int tempXX, int tempYY) {
+  Line(int tempX, int tempY, int tempXX, int tempYY) {
     x = tempX;
     y = tempY;
     xx = tempXX;
     yy = tempYY;
   }
   
-  void drawLine() {
+  void draw() {
     line(x, y, xx, yy);
   }
 }
