@@ -5,10 +5,11 @@ ArrayList lines = new ArrayList();
 void setup() {
   size(960, 800);
   background(0);
-  stroke(#999999);
+  stroke(255);
 }
 
 void draw() {
+  background(0);
   strokeWeight(2);
 /*
   if (mouseReleased()) {
@@ -30,6 +31,12 @@ void mousePressed() {
 
 void mouseReleased() {
   lines.add(new MyLine(startX, startY, mouseX, mouseY));
+}
+
+void mouseMoved() {
+  //if (mousePressed) {
+    line(startX, startY, mouseX, mouseY);
+  //}
 }
 
 void drawButtons() {
