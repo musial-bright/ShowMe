@@ -1,6 +1,7 @@
 int startX;
 int startY;
 ArrayList lines = new ArrayList();
+boolean previewLine = false;
   
 void setup() {
   size(960, 800);
@@ -11,11 +12,11 @@ void setup() {
 void draw() {
   background(0);
   strokeWeight(2);
-/*
-  if (mouseReleased()) {
-    line(mouseX, mouseY, pmouseX, pmouseY);
+
+  if (previewLine) {
+    line(startX, startY, mouseX, mouseY);
   }
-  */
+  
   for (int i=0; i < lines.size(); i++) {
     MyLine l = (MyLine)lines.get(i);
     l.drawLine();
@@ -27,15 +28,17 @@ void draw() {
 void mousePressed() {
   startX = mouseX;
   startY = mouseY;
+  previewLine = true;
 }
 
 void mouseReleased() {
   lines.add(new MyLine(startX, startY, mouseX, mouseY));
+  previewLine = false;
 }
 
 void mouseMoved() {
   //if (mousePressed) {
-    line(startX, startY, mouseX, mouseY);
+    //line(startX, startY, mouseX, mouseY);
   //}
 }
 
