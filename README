@@ -2,9 +2,10 @@ ShowMe
 
 Todo:
 - collaboration (ajax/rails)
+ - simultaneous editing
 - simple access (REST)
 - extended editing (animation, transformations)
 - storage (rails)
  - db
- - file
+ - file download
 
