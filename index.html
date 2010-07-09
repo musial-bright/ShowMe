@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="javascript/processing/processing.js"></script>
+<script src="javascript/processing/init.js"></script>
+<link rel="stylesheet" href="../style.css"/>
+</head>
+
+<body>
+<script type="application/processing">
+void setup() {
+  size(960, 800);
+  background(0);
+  stroke(#cccccc);
+  int lines = 0;
+}
+
+void draw() {
+  strokeWeight(4);
+  if (mousePressed) {
+    
+    line(mouseX, mouseY, pmouseX, pmouseY);
+  }
+}
+</script>
+
+<canvas width="960" height="800"></canvas></p>
+</body>
+</html>
