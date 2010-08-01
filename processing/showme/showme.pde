@@ -14,8 +14,9 @@ void draw() {
   strokeWeight(5);
 
   if (previewLine) {
+    color(#444444);
     line(startX, startY, mouseX, mouseY);
-  }
+  } 
   
   for (int i=0; i < lines.size(); i++) {
     Line l = (Line)lines.get(i);
