@@ -11,7 +11,7 @@ void setup() {
 
 void draw() {
   background(0);
-  strokeWeight(2);
+  strokeWeight(5);
 
   if (previewLine) {
     line(startX, startY, mouseX, mouseY);
@@ -46,17 +46,4 @@ void drawButtons() {
   strokeWeight(1);
 }
 
-class Line {
-  int x, y, xx, yy;
-  
-  Line(int tempX, int tempY, int tempXX, int tempYY) {
-    x = tempX;
-    y = tempY;
-    xx = tempXX;
-    yy = tempYY;
-  }
-  
-  void draw() {
-    line(x, y, xx, yy);
-  }
-}
+
