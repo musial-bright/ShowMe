@@ -11,4 +11,8 @@ class Line {
   void draw() {
     line(x, y, xx, yy);
   }
+  
+  void getClass() {
+    return "Line";
+  }
 }
