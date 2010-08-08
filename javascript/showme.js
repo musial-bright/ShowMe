@@ -5,10 +5,16 @@
         addElement : function(element) {
             if (element.getClass() == "Line") {
                 elements.push(
-                    "" + element.x + "," + element.y + 
-                    "," element.xx + "," + element.yy + ""
+                    "{" +
+                    "type : \"Line\"" + "," + 
+                    "x : "  + element.x  + "," + 
+                    "y : "  + element.y + "," + 
+                    "xx : " + element.xx + "," + 
+                    "yy : " + element.yy + 
+                    "}"
                 );
             }
+            //alert(elements);
         },
 
         getElements : function() {

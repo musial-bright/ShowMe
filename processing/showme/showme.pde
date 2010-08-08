@@ -2,7 +2,7 @@ int startX;
 int startY;
 boolean previewLine = false;
 
-Paper paper = new Paper();
+Paper paper = new Paper(true);
   
 void setup() {
   size(960, 800);
