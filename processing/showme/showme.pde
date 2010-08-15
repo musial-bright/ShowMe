@@ -1,8 +1,9 @@
 int startX;
 int startY;
 boolean previewLine = false;
+boolean externalStorage = true;
 
-Paper paper = new Paper(true);
+Paper paper = new Paper(externalStorage);
   
 void setup() {
   size(960, 800);
@@ -31,12 +32,6 @@ void mousePressed() {
 void mouseReleased() {
   paper.addElement(new Line(startX, startY, mouseX, mouseY));
   previewLine = false;
-}
-
-void mouseMoved() {
-  //if (mousePressed) {
-    //line(startX, startY, mouseX, mouseY);
-  //}
 }
 
 void drawButtons() {

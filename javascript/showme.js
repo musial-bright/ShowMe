@@ -3,14 +3,14 @@
 
     showme = {
         addElement : function(element) {
-            if (element.getClass() == "Line") {
+            if (element.getClassName() == "line") {
                 elements.push(
                     "{" +
-                    "type : \"Line\"" + "," + 
-                    "x : "  + element.x  + "," + 
-                    "y : "  + element.y + "," + 
-                    "xx : " + element.xx + "," + 
-                    "yy : " + element.yy + 
+                    "type : \"line\"" + "," + 
+                    "x:"  + element.x  + "," + 
+                    "y:"  + element.y + "," + 
+                    "xx:" + element.xx + "," + 
+                    "yy:" + element.yy + 
                     "}"
                 );
             }

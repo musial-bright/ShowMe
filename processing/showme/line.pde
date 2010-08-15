@@ -1,5 +1,5 @@
 class Line {
-  int x, y, xx, yy;
+  public int x, y, xx, yy;
   
   Line(int tempX, int tempY, int tempXX, int tempYY) {
     x = tempX;
@@ -12,7 +12,7 @@ class Line {
     line(x, y, xx, yy);
   }
   
-  void getClass() {
-    return "Line";
+  String getClassName() {
+    return "line";
   }
 }

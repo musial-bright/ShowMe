@@ -2,43 +2,36 @@ class Paper {
   
   ArrayList internalStorage = new ArrayList();
   boolean externalStorageMode = false;
-  
+  ExternalStorage externalStorage = new ExternalStorage();
+
   Paper(boolean externalStorageMode) {
     this.externalStorageMode = externalStorageMode;
   }
   
   void addElement(Object o) {
     if (externalStorageMode) {
-      showme.addElement(o);
+      externalStorage.add(o);
     } else {
       internalStorage.add(o);
     }
   }
   
-  void draw() {   
+  void draw() {
+    ArrayList elements;
     if (externalStorageMode) {
-        externalStorage = showme.getElements();
-        text("externalStorage=" + externalStorage, 0, 10, 20);
-        
-      if (externalStorage != null && externalStorage != "") {
-        text("ok", 0, 20, 20);
-        //String[] e = externalStorage.split(",");
-        text("e=" + externalStorage[0], 0, 100, 20); 
-        /*      
-        for (int i=0; i < e.length; i++) {
-          text("" + e[i], 0, 40, 20);  
-        } 
-        */     
-      }
-   
-   
+      text("External Storage",0 , 10);
+      elements = externalStorage.getElements();
     } else {
-      for (int i=0; i < internalStorage.size(); i++) {
-        text(internalStorage.get(i), 0, 40, (i * 20));
-        Line l = (Line)internalStorage.get(i);
+      text("Internal Storage",0 ,10);
+      elements = internalStorage;
+    }
+    if (elements != null) {
+      for (int i=0; i < elements.size(); i++) {
+        Object l = elements.get(i);
         l.draw();
-        text("line " + l.x + "," + l.y + " -> " + l.xx + "," + l.yy , 0, 10 + (i * 20));
+        //text("line " + l.x + "," + l.y + " -> " + l.xx + "," + l.yy , 0, 10 + (i * 20));
       }
     }
   }
+  
 }
