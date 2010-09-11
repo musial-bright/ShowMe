@@ -14,10 +14,22 @@
                     "}"
                 );
             }
-            alert(elements);
+            //alert(elements);
+            jQuery.ajax(
+                {
+                    type: "POST",
+                    url: "/sketches/1",
+                    data: { _method: "PUT, ", sketch_data: elements }
+                }
+            );
         },
 
         getElements : function() {
+            /*
+            jQuery.get('/sketches/1.text', function(data) {
+                elements = data.split("},{");
+            });
+            */
             return elements;
         },
 

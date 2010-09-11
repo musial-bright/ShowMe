@@ -19,7 +19,7 @@ class SketchesController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @sketch }
       format.json { render :json => @sketch }
-      
+      format.text { render :text => @sketch.data }
     end
   end
 
