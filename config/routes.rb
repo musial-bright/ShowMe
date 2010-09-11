@@ -1,4 +1,6 @@
 Showme::Application.routes.draw do
+  resources :sketches
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

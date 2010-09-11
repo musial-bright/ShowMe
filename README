@@ -4,10 +4,11 @@ Demo: http://playground.musial-bright.com/ShowMe/
 
 Todo:
 - collaboration (ajax/rails)
- - simultaneous editing
+  - simultaneous editing
+  - max elements / sketch
 - simple access (REST)
 - extended editing (animation, transformations)
 - storage (rails)
- - db
- - file download
+  - db
+  - file download
 

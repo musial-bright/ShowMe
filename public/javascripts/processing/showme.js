@@ -14,7 +14,7 @@
                     "}"
                 );
             }
-            //alert(elements);
+            alert(elements);
         },
 
         getElements : function() {

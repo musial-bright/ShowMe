@@ -6,7 +6,7 @@ boolean externalStorage = true;
 Paper paper = new Paper(externalStorage);
   
 void setup() {
-  size(960, 800);
+  size(400, 400);
   background(0);
   stroke(255);
   strokeWeight(10);
